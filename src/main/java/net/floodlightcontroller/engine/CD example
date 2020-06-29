@@ -1,0 +1,20 @@
+{
+  "srcIPAddress": "10.0.0.1",
+  "dstIPAddress": "10.0.0.2",
+  "TransportProtocol": "QUIC",
+  "srcPort": 2000,
+  "dstPort": 80,
+  "streams": [
+    {
+      "id": 1,
+      "requiredBandwidth": 5,
+      "bandwidthUnit": "Mbps"
+    },
+    {
+      "id": 2,
+      "requiredBandwidth": 3,
+      "bandwidthUnit": "Mbps"
+    }
+  ],
+  "key": 11111111111111222222222222222222222222233333333333333333333334444444444444444444444444
+}
