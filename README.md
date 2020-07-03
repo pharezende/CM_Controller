@@ -16,7 +16,7 @@
   * Obs: You can access the implemented code in: /floodlight/src/main/java/net/floodlightcontroller/engine
   * Pre-condition: Floodlight is running.
 
-http://<ip-address>:8080/engine/communication-descriptor/  ---> where ip-address identifies an interface of the machine (e.g. VM) that the controller is running.
+http://{ip-address}:8080/engine/communication-descriptor/  ---> where ip-address identifies an interface of the machine (e.g. VM) that the controller is running.
 
    
 
