@@ -1,29 +1,31 @@
-1. Build and Run Floodlight:
+* Build and Run Floodlight:
 
-1.1. Download this code
-Command line:
-1.2 $ ant
-1.3 $ java -jar target/floodlight.jar
+  * Download this code
 
-
-Using Eclipse:
-1.2. https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/1343544/Installation+Guide
+    Command line:
+    > ant
+ 
+    > java -jar target/floodlight.jar
 
 
-2. Accessing the RESTful API:
-
-Pre-condition: Floodlight is running.
-
-2.1. http://<ip-address>:8080/engine/communication-descriptor/  ---> where ip-address identifies an interface of the machine (e.g. VM) that the controller is running.
-
-Obs: You can access the implemented code in: /floodlight/src/main/java/net/floodlightcontroller/engine
+    Using Eclipse:
+    https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/1343544/Installation+Guide
 
 
-3. Functionalities:
-Only the POST METHOD is implemented so far. 
+* Accessing the RESTful API:
+  * Obs: You can access the implemented code in: /floodlight/src/main/java/net/floodlightcontroller/engine
+  * Pre-condition: Floodlight is running.
+
+http://{ip-address}:8080/engine/communication-descriptor/  ---> where ip-address identifies an interface of the machine (e.g. VM) that the controller is running.
+
+   
+
+
+* Functionalities:
+  * Only the POST METHOD is implemented so far. 
 
 An example of JSON data to be sent to the Controller:
-
+```json
 {
   "srcIPAddress": "10.0.0.1",
   "dstIPAddress": "10.0.0.2",
@@ -44,8 +46,8 @@ An example of JSON data to be sent to the Controller:
   ],
   "key": 11111111111111222222222222222222222222233333333333333333333334444444444444444444444444
 }
-
-The message returned from the Controller must be the following: Worked! 
+```
+The message returned from the Controller must be the following: **Worked!** 
 
 
 
