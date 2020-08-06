@@ -16,10 +16,10 @@ public class CommunicationDescriptorResource extends CommunicationDescriptorReso
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
-			return "Did not work!";
+			return ("{\"status\" : \"Did not work!\"}");
 		}
         
-		return "Worked!";
+		return ("{\"status\" : \"Worked!\"}");
     }
     
     @Get("json")

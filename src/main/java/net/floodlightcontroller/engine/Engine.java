@@ -1,7 +1,6 @@
 package net.floodlightcontroller.engine;
 
 import java.io.IOException;
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -11,13 +10,11 @@ import java.util.Map;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import com.fasterxml.jackson.core.type.TypeReference;
 
 import org.projectfloodlight.openflow.protocol.OFMessage;
 import org.projectfloodlight.openflow.protocol.OFType;
 
 import com.fasterxml.jackson.databind.MappingJsonFactory;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import net.floodlightcontroller.core.FloodlightContext;
 import net.floodlightcontroller.core.IFloodlightProviderService;
@@ -117,7 +114,7 @@ public class Engine implements IStreamingService, IOFMessageListener, IFloodligh
 		Integer srcPort = null;
 		Integer dstPort = null;
 		List<Stream> streams = new ArrayList<Stream>();
-		BigInteger key = null;
+		char[] key = null;
 
 		try {
 			jp = f.createParser(json);
@@ -165,7 +162,7 @@ public class Engine implements IStreamingService, IOFMessageListener, IFloodligh
 				break;
 
 			case "key":
-				key = jp.getBigIntegerValue();
+				key = jp.getText().toCharArray();
 				break;
 				
 			default:
@@ -189,6 +186,7 @@ public class Engine implements IStreamingService, IOFMessageListener, IFloodligh
 		}
 		
 	}
+
 
 	private List<Stream> jsonToStream(String streams, JsonParser jp) throws IOException{
 		

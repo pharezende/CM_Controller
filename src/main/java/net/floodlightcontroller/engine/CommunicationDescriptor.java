@@ -1,6 +1,5 @@
 package net.floodlightcontroller.engine;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,15 +11,14 @@ public class CommunicationDescriptor {
 	private Integer srcPort;
 	private Integer dstPort;
 	private List<Stream> streams;
-	private BigInteger key; //32 bits is not enough
-
+	private char[] key = new char[256]; 
 
 	public CommunicationDescriptor(String srcIPAddress, 
 			String dstIPAddress, 
 			String transportProtocol, 
 			Integer srcPort,
 			Integer dstPort,
-			BigInteger key) {
+			char[] key) {
 		
 		this.srcIPAddress = srcIPAddress;
 		this.dstIPAddress = dstIPAddress;
@@ -55,7 +53,7 @@ public class CommunicationDescriptor {
 		streams.add(s);
 	}
 	
-	public BigInteger getKey() {
+	public char[] getKey() {
 		return key;
 	}
 	
