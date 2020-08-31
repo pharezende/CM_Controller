@@ -44,7 +44,7 @@ An example of JSON data to be sent to the Controller:
       "bandwidthUnit": "Mbps"
     }
   ],
-  "key": 11111111111111222222222222222222222222233333333333333333333334444444444444444444444444
+  "key": "11111111111111222222222222222222222222233333333333333333333334444444444444444444444444"
 }
 ```
 The message returned from the Controller must be the following: **Worked!** 
